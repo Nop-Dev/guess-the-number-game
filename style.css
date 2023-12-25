@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Montserrat:wght@600;700&display=swap');
+
+:root {
+    font-size: 62.5%;
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(2,0,36,0.8799894957983193) 0%, rgba(9,103,121,1) 35%, rgba(0,212,255,1) 100%);
+    margin: auto;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    color: #34355B;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-inline: auto;
+
+    text-align: center;
+
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+.content {
+    margin: 38px 64px 38px 64px;
+}
+
+button {
+    border-radius: 0px 4px 4px 0px;
+    background: #7879F1;
+    border: none;
+
+    color: #fff;
+
+    padding: 1.6rem;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #6969d1;
+}
+
+main h1 {
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
+main p {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: rgba(52, 53, 91, 0.80);
+    margin-bottom: 4.5rem;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.button-wrapper input {
+    border-radius: 4px 0px 0px 4px;
+    background: #DCE2E9;
+    padding: 1.6rem;
+    width: 1rem;
+    border: none;
+}
+
+.hide {
+    display: none;
+}
+
+.screen2 h2 {
+    font-size: 4rem;
+}
+
+.screen2 button {
+    border-radius: 4px;
+}
