@@ -1,50 +1,46 @@
+/* Import de fontes externas */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Montserrat:wght@600;700&display=swap');
 
+/* Configurações globais */
 :root {
     font-size: 62.5%;
-
-    margin: 0;
-    box-sizing: border-box;
 }
 
+/* Estilo do corpo da página */
 body {
-    background: linear-gradient(90deg, rgba(2,0,36,0.8799894957983193) 0%, rgba(9,103,121,1) 35%, rgba(0,212,255,1) 100%);
-    margin: auto;
-
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.8799894957983193) 0%, rgba(9, 103, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    margin: 0;
     height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/* Estilo da seção principal */
 main {
     color: #34355B;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 1.6rem;
-    margin-inline: auto;
-
+    margin: auto;
     text-align: center;
-
     background-color: #fff;
     border-radius: 6px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
 }
 
+/* Estilo do conteúdo dentro da seção principal */
 .content {
-    margin: 38px 64px 38px 64px;
+    margin: 38px;
 }
 
+/* Estilo dos botões */
 button {
     border-radius: 0px 4px 4px 0px;
     background: #7879F1;
     border: none;
-
     color: #fff;
-
     padding: 1.6rem;
-
     cursor: pointer;
     transition: .3s;
 }
@@ -53,11 +49,13 @@ button:hover {
     background: #6969d1;
 }
 
+/* Estilo dos títulos dentro da seção principal */
 main h1 {
     font-size: 5rem;
     margin-bottom: 0;
 }
 
+/* Estilo dos parágrafos dentro da seção principal */
 main p {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
@@ -66,27 +64,38 @@ main p {
     margin-bottom: 4.5rem;
 }
 
+/* Estilo do wrapper dos botões */
 .button-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
+/* Estilo da etiqueta associada ao campo de entrada */
+.button-wrapper label {
+    margin-right: 10px;
+}
+
+/* Estilo do campo de entrada */
 .button-wrapper input {
     border-radius: 4px 0px 0px 4px;
     background: #DCE2E9;
     padding: 1.6rem;
-    width: 1rem;
     border: none;
+    width: 1rem;
 }
 
+/* Estilo de ocultar elementos */
 .hide {
     display: none;
 }
 
+/* Estilo do título dentro da segunda tela */
 .screen2 h2 {
     font-size: 4rem;
 }
 
+/* Estilo do botão dentro da segunda tela */
 .screen2 button {
     border-radius: 4px;
 }
