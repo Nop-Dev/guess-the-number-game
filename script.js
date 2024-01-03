@@ -1,7 +1,7 @@
 // Criação de Número aleatório de 0 a 9
 const randomNumber = Math.round(Math.random() * 9);
 
-alert(randomNumber);
+alert(randomNumber)
 
 // Variáveis de telas
 const screen1 = document.querySelector(".screen1");
@@ -9,7 +9,9 @@ const screen2 = document.querySelector(".screen2");
 
 let xAttempts = 1;
 
-function tryToCheckInput() {
+function tryToCheckInput(event) {
+    event.preventDefault()
+    
     let input = document.querySelector("#inputNumber");
 
     if(Number(input.value) == randomNumber) {
@@ -20,8 +22,7 @@ function tryToCheckInput() {
     };
     
     console.log(input.value);
-
-    input.value = "gica do programa "
+    input.value = ''
 
     xAttempts++;
 }
