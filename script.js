@@ -1,43 +1,46 @@
 // Criação de Número aleatório de 0 a 9
 const randomNumber = Math.round(Math.random() * 9);
 
-alert(randomNumber)
-
 // Variáveis de telas
 const screen1 = document.querySelector(".screen1");
 const screen2 = document.querySelector(".screen2");
 
+// Variáveis dos botões
+const toTry = document.querySelector("#btnTry");
+const toReset = document.querySelector("#btnReset");
+
+// Variável das tentativas
 let xAttempts = 1;
 
+// Eventos
+toTry.addEventListener('click', tryToCheckInput);
+toReset.addEventListener('click', resetGame);
+
+// Funções
 function tryToCheckInput(event) {
-    event.preventDefault()
-    
+    event.preventDefault();
     let input = document.querySelector("#inputNumber");
 
-    if(Number(input.value) == randomNumber) {
-        screen1.classList.add("hide");
-        screen2.classList.remove("hide");
-
+    if(Number(input.value) == randomNumber && xAttempts == 1) {
+        toggleScreen();
+        screen2.querySelector("h2").innerText = `Acertou em ${xAttempts} tentativa!`;
+    } else if (Number(input.value) == randomNumber) {
+        toggleScreen();
         screen2.querySelector("h2").innerText = `Acertou em ${xAttempts} tentativas!`;
     } else {
-        alert("Você errou, tente novamente...")
-    }
-    
-    console.log(input.value);
-    input.value = ''
+        alert("Você errou, tente novamente...");
+    };
 
+    input.value = '';
     xAttempts++;
 }
 
 function resetGame() {
-    screen1.classList.remove("hide");
-    screen2.classList.add("hide");
-
+    toggleScreen();
     xAttempts = 1;
 }
 
-const toTry = document.querySelector("#btnTry");
-const toReset = document.querySelector("#btnReset");
-
-toTry.addEventListener('click', tryToCheckInput)
-toReset.addEventListener('click', resetGame)
+function toggleScreen() {
+    screen1.classList.toggle("hide");
+    screen2.classList.toggle("hide");
+}
