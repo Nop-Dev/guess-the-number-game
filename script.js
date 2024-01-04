@@ -1,5 +1,5 @@
 // Criação de Número aleatório de 0 a 9
-const randomNumber = Math.round(Math.random() * 9);
+let randomNumber = Math.round(Math.random() * 9);
 
 // Variáveis de telas
 const screen1 = document.querySelector(".screen1");
@@ -15,6 +15,7 @@ let xAttempts = 1;
 // Eventos
 toTry.addEventListener('click', tryToCheckInput);
 toReset.addEventListener('click', resetGame);
+document.addEventListener('keydown', keydownEnter);
 
 // Funções
 function tryToCheckInput(event) {
@@ -38,9 +39,16 @@ function tryToCheckInput(event) {
 function resetGame() {
     toggleScreen();
     xAttempts = 1;
+    let randomNumber = Math.round(Math.random() * 9);
 }
 
 function toggleScreen() {
     screen1.classList.toggle("hide");
     screen2.classList.toggle("hide");
 }
+
+function keydownEnter(e) { // Colocando o Enter para funcionar na hora de resetar o jogo...
+    if(e.key == 'Enter' && screen1.classList.contains('hide')) {
+        resetGame();
+    };
+};
