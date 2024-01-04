@@ -18,8 +18,10 @@ function tryToCheckInput(event) {
         screen1.classList.add("hide");
         screen2.classList.remove("hide");
 
-        document.querySelector(".screen2 h2").innerText = `Acertou em ${xAttempts} tentativas!`;
-    };
+        screen2.querySelector("h2").innerText = `Acertou em ${xAttempts} tentativas!`;
+    } else {
+        alert("Você errou, tente novamente...")
+    }
     
     console.log(input.value);
     input.value = ''
@@ -38,4 +40,4 @@ const toTry = document.querySelector("#btnTry");
 const toReset = document.querySelector("#btnReset");
 
 toTry.addEventListener('click', tryToCheckInput)
-toReset.addEventListener('click', )
+toReset.addEventListener('click', resetGame)
