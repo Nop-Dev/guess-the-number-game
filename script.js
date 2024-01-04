@@ -20,7 +20,15 @@ document.addEventListener('keydown', keydownEnter);
 // Funções
 function tryToCheckInput(event) {
     event.preventDefault();
+
     let input = document.querySelector("#inputNumber");
+    if(Number(input.value) < 0 || Number(input.value) > 9) {
+        alert("Número inválido...");
+    };
+
+    if(Number(input.value) == '') {
+        return;
+    }
 
     if(Number(input.value) == randomNumber && xAttempts == 1) {
         toggleScreen();
@@ -39,7 +47,7 @@ function tryToCheckInput(event) {
 function resetGame() {
     toggleScreen();
     xAttempts = 1;
-    let randomNumber = Math.round(Math.random() * 9);
+    randomNumber = Math.round(Math.random() * 9);
 }
 
 function toggleScreen() {
