@@ -1,5 +1,5 @@
-// Criação de Número aleatório de 0 a 9
-let randomNumber = Math.round(Math.random() * 9);
+// Criação de Número aleatório de 1 a 10
+let randomNumber = Math.round(Math.random() * 10);
 
 // Variáveis de telas
 const screen1 = document.querySelector(".screen1");
@@ -22,7 +22,7 @@ function tryToCheckInput(event) {
     event.preventDefault();
 
     let input = document.querySelector("#inputNumber");
-    if(Number(input.value) < 0 || Number(input.value) > 9) {
+    if(Number(input.value) < 1 || Number(input.value) > 10) {
         alert("Número inválido...");
     };
 
